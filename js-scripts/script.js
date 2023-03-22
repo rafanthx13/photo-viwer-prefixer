@@ -1,13 +1,14 @@
 /* Seleciona os elementos  HTML do chat.php */
 const sendBtn = document.querySelector("#send-form");
 const form = document.querySelector(".typing-area");
-// const originalImage = document.querySelector("#original-image").value;
-// const prefixer = document.querySelector("#prefixer").value;
+const originalImage = form.querySelector("#original-image").value;
+const prefixer = form.querySelector("#prefixer").value;
 
 sendBtn.onclick = () => {
 	console.log('entrou')
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", "php-scripts/alter-image.php", true);
+	console.log(form);
 	xhr.onload = () => {
 		if(xhr.readyState === XMLHttpRequest.DONE){
 			console.log('success')
@@ -17,6 +18,10 @@ sendBtn.onclick = () => {
 			// }
 		}
 	}
+
 	let formData = new FormData(form);
+	for (const [key, value] of formData) {
+	  console.log(`${key}: ${value}\n`);
+	}	
 	xhr.send(formData);
 }
