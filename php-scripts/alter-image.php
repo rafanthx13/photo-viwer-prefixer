@@ -5,16 +5,21 @@ $dir2    = 'images/clasified-images';
 $prefixer = $_POST['prefixer'];
 $imageFile = $_POST['original-image'];
 
-echo $dir . '/' . $imageFile;
-echo '<br>';
-echo $dir2 . '/' . $imageFile;
-echo '<br>';
-echo $dir2 . '/' . $prefixer . '-' . $imageFile;
-echo '<br>';
-
 $result = copy('../' . $dir . '/' . $imageFile, '../' . $dir2 . '/' . $imageFile);
 echo 'result = ' . $result . '<br>';
 
-rename('../' . $dir2 . '/' . $imageFile, '../' . $dir2 . '/' . $prefixer . '-' . $imageFile);
+$resultRename = rename('../' . $dir2 . '/' . $imageFile, '../' . $dir2 . '/' . $prefixer . '-' . $imageFile);
+
+
+if ($resultRename) {
+    // echo "Arquivo movido e renomeado com sucesso.";
+    $log = date('Y-m-d H:i:s') . " - Renomeado de: " . $imageFile . ' para ' . $resultRename . "\n";
+    file_put_contents('../logs/log.txt', $log, FILE_APPEND);
+} else {
+    $erro = error_get_last();
+    $log = date('Y-m-d H:i:s') . " - Erro ao mover arquivo: " . $erro['message'] . "\n";
+    file_put_contents('../logs/log.txt', $log, FILE_APPEND);
+}
+
 
 ?>

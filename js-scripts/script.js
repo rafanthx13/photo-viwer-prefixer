@@ -20,6 +20,8 @@ for (var i = 0; i < cards.length; i++) {
 					// 	inputField.value = "";
 					// 	scrollToBottom();
 					// }
+				} else {
+					console.log('error')
 				}
 			}
 
