@@ -14,43 +14,53 @@ for (var i = 0; i < cards.length; i++) {
 			formre = this.parentNode
 			// console.log(this.parentNode);
 			xhr.onload = () => {
+				console.log(xhr.readyState)
+				if(xhr.status == 404){
+					console.log('error')
+					var failed = formre.querySelector("#failed")
+					var suc = formre.querySelector("#succes")
+					suc.style.display = "none"
+					failed.style.display = "inline"
+					return 0
+				}
 				if(xhr.readyState === XMLHttpRequest.DONE){
 					console.log('success')
+					var suc = formre.querySelector("#succes")
+					suc.style.display = "inline"
+					formre.parentNode.previousElementSibling.style.display = 'none'
+					// formre.nextElementSibling.style.display = 'inline'
+					formre.style.display = 'none'
 					// if(xhr.status === 200){
 					// 	inputField.value = "";
 					// 	scrollToBottom();
 					// }
 				} else {
-					console.log('error')
+					
 				}
 			}
 
 			let formData = new FormData(formre);
 			for (const [key, value] of formData) {
 			  console.log(`${key}: ${value}\n`);
-			}	
-			xhr.send(formData);
+			}
+			if(formData.get('prefixer') != ''){
+				xhr.send(formData);	
+			}
+			
     };
+    // adicionar o enter
+    
+    // console.log(card)
+    // var input = formre.querySelector("#prefixer");
+	  // var button = formre.querySelector("#send-form");
+	  // console.log(input)
+	  // console.log(button)
+
+	  // input.addEventListener("keypress", function(event) {
+	  //   if (event.key === "Enter") {
+	  //     // event.preventDefault();
+	  //     button.click();
+	  //   }
+	  // });
+
 }
-
-// sendBtn.onclick = () => {
-// 	console.log('entrou')
-// 	let xhr = new XMLHttpRequest();
-// 	xhr.open("POST", "php-scripts/alter-image.php", true);
-// 	console.log(form);
-// 	xhr.onload = () => {
-// 		if(xhr.readyState === XMLHttpRequest.DONE){
-// 			console.log('success')
-// 			// if(xhr.status === 200){
-// 			// 	inputField.value = "";
-// 			// 	scrollToBottom();
-// 			// }
-// 		}
-// 	}
-
-// 	let formData = new FormData(form);
-// 	for (const [key, value] of formData) {
-// 	  console.log(`${key}: ${value}\n`);
-// 	}	
-// 	xhr.send(formData);
-// }

@@ -96,10 +96,16 @@ function autocomplete(inp, arr) {
 }
 
 /*An array containing all the country names in the world:*/
-var countries = [
+var nome_to_complete = [
     "dompatcho", "pedro7c", "icaro", "italo", "italo-segundo", "tabnews",
     "astrologia", "tmdz",  "candidates"
 ];
 
-/*initiate the autocomplete function on the "prefixer" element, and pass along the countries array as possible autocomplete values:*/
-autocomplete(document.getElementById("prefixer"), countries);
+/*initiate the autocomplete function on the "prefixer" element, and pass along the nome_to_complete array as possible autocomplete values:*/
+autocomplete(document.getElementById("prefixer"), nome_to_complete);
+
+var cards = document.querySelectorAll(".prefixer-func");
+for (var i = 0; i < cards.length; i++) {
+    var card = cards[i];
+    autocomplete(card, nome_to_complete);
+}
