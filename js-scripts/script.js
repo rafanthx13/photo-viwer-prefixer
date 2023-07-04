@@ -4,6 +4,10 @@ const form = document.querySelector(".typing-area");
 const originalImage = form.querySelector("#original-image").value;
 const prefixer = form.querySelector("#prefixer").value;
 
+let listPrefixers = [
+	'italo', 'icaro'
+];
+
 var cards = document.querySelectorAll(".send-form");
 for (var i = 0; i < cards.length; i++) {
     var card = cards[i];
@@ -48,6 +52,28 @@ for (var i = 0; i < cards.length; i++) {
 			}
 			
     };
+/*
+    listPrefixers.forEach(function(element) {
+        let sendButton = document.createElement('button');
+        sendButton.innerHTML = element;
+        sendButton.classList.add('custom-button');
+        sendButton =  '<button class="btn btn-secondary send-form">' + element + '</button>'
+
+		// const customButton = document.createElement('button');
+		// customButton.innerHTML = 'Botão Personalizado';
+		// customButton.classList.add('custom-button');
+
+		// const buttonWrapper = document.createElement('div');
+		// buttonWrapper.classList.add('button-wrapper');
+
+		// buttonWrapper.appendChild(sendButton);
+        card.insertAdjacentHTML('afterbegin', sendButton);
+		// buttonWrapper.appendChild(customButton);
+
+		// buttonContainer.appendChild(buttonWrapper);
+      });
+*/
+
     // adicionar o enter
     
     // console.log(card)
