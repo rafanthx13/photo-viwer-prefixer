@@ -1,10 +1,9 @@
 <?php
 
+// constants
 $dir_base    = 'images/clasify-images';
 $dir_destiny    = 'images/clasified-images';
 $dir_guard_after    = 'images/safe-guard-images';
-
-
 
 $prefixer = $_POST['prefixer'];
 $original_image = $_POST['original-image'];
