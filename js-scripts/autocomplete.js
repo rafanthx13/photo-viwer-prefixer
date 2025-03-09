@@ -101,22 +101,6 @@ function autocomplete(inp, arr) {
   });
 }
 
-/*An array containing all the country names in the world:*/
-var nome_to_complete = [
-  "dompatcho",
-  "pedro7c",
-  "icaro",
-  "italo",
-  "italo-segundo",
-  "tabnews",
-  "astrologia",
-  "tmdz",
-  "candidates",
-  "licoes",
-
-  "@thiago2n",
-];
-
 function lerTags(arquivo) {
   fetch(arquivo)
     .then((response) => {
@@ -130,7 +114,8 @@ function lerTags(arquivo) {
         .split("\n")
         .map((tag) => tag.trim())
         .filter((tag) => tag !== "");
-      console.log(tags);
+      // console.log(tags);
+      nome_to_complete = tags;
       /*initiate the autocomplete function on the "prefixer" element, and pass along the nome_to_complete array as possible autocomplete values:*/
       autocomplete(document.getElementById("prefixer"), nome_to_complete);
 
