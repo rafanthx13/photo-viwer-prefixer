@@ -1,15 +1,24 @@
 # Photo Viwer
 
-
 ## Metodos PHP
 
 scandir(lista todos os arquivos de uma pasta)
 
+Aplicaçâo que serve para clasificar imagens, adicionando um prefixo na imagem
 
+# Como usar
 
+````sh
 php -S 127.0.0.1:8000
+````
 
-## Novas Features
++ Vá eM [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+tem que ter as 3 pastas:
+
++ classified-images: É onde vai ficar a image após inserir o prefix
++ clasify-images: imagesn para serem classificadas
++ safe-guard-images: É OBRIGATORIO TER ELA. é A IMAGEM ORIGINAL, QUE SAI DE CLASIFY-IMAGES VAI APRA ESSA, SERVE PARA DELETAR DE CLASIFY-IMAGES E AO MESO TEMPO NAO PERDER A IMAGE. pROVAVLEMTEN DELETA ELA QUANDO TERMINAR
 
 + Ao clicar enter em input, já dar o click e salvar
 + colocar o autocomplete em tudo
@@ -102,7 +111,6 @@ tmdz
 tmdz--pedro7
 yukio
 
-
 @chris_rodihero
 @slendelagnore
 @victormorettir
@@ -110,4 +118,3 @@ yukio
 @caiommoreno
 @raiamscarn
 @orafaelpieroni
-

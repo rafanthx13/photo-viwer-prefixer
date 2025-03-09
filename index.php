@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/style.css">
@@ -38,6 +39,41 @@
 
         input {
             border-radius: 10px;
+        }
+
+        .mb-10 {
+            margin-bottom: 10px !important;
+        }
+
+        .blocked-cursor {
+            cursor: not-allowed;
+            background-color: #ced0d3;
+        }
+
+        /* Cortar parte da imagem, a parte de baixo* com object-fit */
+        .img-container {
+            width: 350px;
+            height: 600px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        /* */
+        .item-of-flex {
+            flex-basis: calc(20% - 10px);
+            /* Define a largura de cada item (25% - 10px de margem) */
+            margin: 5px;
+            /* Adiciona uma margem entre os itens */
+            box-sizing: border-box;
+            /* Garante que a largura inclua a margem e o preenchimento */
+            font-size: small;
         }
     </style>
 
