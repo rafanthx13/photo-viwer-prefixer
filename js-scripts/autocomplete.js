@@ -99,7 +99,7 @@ function autocomplete(inp, arr) {
 var nome_to_complete = [
     "dompatcho", "pedro7c", "icaro", "italo", "italo-segundo", "tabnews",
     "astrologia", "tmdz",  "candidates", "licoes",
-    "delete", "jordan", "book", "lucas-maciel", "casa", "fun", 
+    
     "@thiago2n", 
 ];
 
