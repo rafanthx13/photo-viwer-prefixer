@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <title>Photo Viewer Prefixer</title>
@@ -20,8 +21,8 @@
 
     <style>
         * {
-          box-sizing: border-box;
-          font-family: 'Inter', sans-serif;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
         }
 
         span {
@@ -29,17 +30,17 @@
         }
 
         body {
-        /*  font: 16px Arial;  */
-        background: rgb(2,0,36);
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(7,59,154,1) 51%, rgba(2,3,9,1) 100%);
-        color: white;
+            /*  font: 16px Arial;  */
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(7, 59, 154, 1) 51%, rgba(2, 3, 9, 1) 100%);
+            color: white;
         }
 
         input {
             border-radius: 10px;
         }
     </style>
-  
+
 </head>
 
 <body class="container">
@@ -51,44 +52,45 @@
 
     <div class="container">
 
-    <?php
+        <?php
         $dir    = './images/clasify-images';
         $files1 = scandir($dir);
         unset($files1[0]);
         unset($files1[1]);
-    ?>
+        ?>
 
-    <?php foreach($files1 as $key=>$value): ?>
-        <div style="text-align: center; display: flex; flex-direction: row;">
-            <!-- Mostrar Imagem -->
-            <img src="<?=$dir . '/' . $value ?>" alt="" width="350" style="border-radius: 10px; height: auto;">
-            <div class="d-flex flex-column ml-5">
-                <form action="POST"  class="typing-area"> 
-                    <input type="text" id="original-image" name="show-text-image" disabled value="<?= $value; ?>">
-                    <input type="hidden" id="original-image" name="original-image" value="<?= $value; ?>">
+        <?php foreach ($files1 as $key => $value): ?>
+            <div style="text-align: center; display: flex; flex-direction: row;">
+                <!-- Mostrar Imagem -->
+                <img src="<?= $dir . '/' . $value ?>" alt="" width="350" style="border-radius: 10px; height: auto;">
+                <div class="d-flex flex-column ml-5">
+                    <form action="POST" class="typing-area">
+                        <input type="text" id="original-image" name="show-text-image" disabled value="<?= $value; ?>">
+                        <input type="hidden" id="original-image" name="original-image" value="<?= $value; ?>">
 
-                    <div class="autocomplete" >
-                        <input id="prefixer" type="text" name="prefixer" placeholder="Prefix">
-                    </div>
-                    <!-- <input id="prefixer" type="text" name="prefixer" placeholder="Prefix"> -->
-                    <br>
-                    <button type="button" class="btn btn-secondary send-form" id="send-form">Enviar</button>
-                    <button type="button" class="btn btn-success" id="succes" disabled style="display: none;">Sucesso</button>
-                    <button type="button" class="btn btn-danger" id="failed" disabled style="display: none;">Falhou</button>
-                </form>
-                <!-- <span style="display: none;">FOI FEITO COM SUCESSO</span> -->
-                <!-- <button type="button" class="btn btn-secondary">Previous</button> -->
-                <!-- <button type="button" class="btn btn-secondary">Next</button> -->
+                        <div class="autocomplete">
+                            <input id="prefixer" type="text" name="prefixer" placeholder="Prefix">
+                        </div>
+                        <!-- <input id="prefixer" type="text" name="prefixer" placeholder="Prefix"> -->
+                        <br>
+                        <button type="button" class="btn btn-secondary send-form" id="send-form">Enviar</button>
+                        <button type="button" class="btn btn-success" id="succes" disabled style="display: none;">Sucesso</button>
+                        <button type="button" class="btn btn-danger" id="failed" disabled style="display: none;">Falhou</button>
+                    </form>
+                    <!-- <span style="display: none;">FOI FEITO COM SUCESSO</span> -->
+                    <!-- <button type="button" class="btn btn-secondary">Previous</button> -->
+                    <!-- <button type="button" class="btn btn-secondary">Next</button> -->
+                </div>
             </div>
-        </div>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
 
     </div>
 
-<!-- Scrit que chama alter-php e move a imagem -->
-<script src="./js-scripts/script.js" type="text/javascript"></script>
-<!-- Script para auto-complete -->
-<script src="./js-scripts/autocomplete.js" type="text/javascript"></script>
+    <!-- Scrit que chama alter-php e move a imagem -->
+    <script src="./js-scripts/script.js" type="text/javascript"></script>
+    <!-- Script para auto-complete -->
+    <script src="./js-scripts/autocomplete.js" type="text/javascript"></script>
 
 </body>
+
 </html>
