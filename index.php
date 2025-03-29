@@ -105,11 +105,82 @@
                         <input type="hidden" id="original-image" name="original-image" value="<?= $value; ?>">
 
                         <div class="autocomplete">
-                            <input id="prefixer" type="text" name="prefixer" placeholder="Prefix">
+                            <input id="prefixer" type="text" class="prefixer" name="prefixer" placeholder="Prefix">
                         </div>
                         <!-- <input id="prefixer" type="text" name="prefixer" placeholder="Prefix"> -->
                         <br>
                         <button type="button" class="btn btn-secondary send-form" id="send-form">Enviar</button>
+                        <br><br>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="del">del</button>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="pedro7">pedro7</button>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="hebert">hebert</button>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="dom-patcho">dom-patcho</button>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="icaro">icaro</button>
+                        <br><br>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="direita">direita</button>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="investimento">investimento</button>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="anwar">anwar</button>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="insta-boy">insta-boy</button>
+                        <br><br>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="grindr-boy">grindr-boy</button>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="raiam">raiam</button>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="tech">tech</button>
+                        <button type="button" class="btn btn-secondary send-form-taged" data-valor="eslen">eslen</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="threads-bh">threads-bh</button>
+                        <br><br>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="andre-birito">eslen</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="akita">akita</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="saude">saude</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="tinder-boy">tinder-boy</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="ds">ds</button>
+<br><br>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="daniel-scoot">daniel-scoot</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="italo">italo</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="fashion">fashion</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="bh">bh</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="tech">tech</button>
+<br><br>
+
+
+<button type="button" class="btn btn-secondary send-form-taged" 
+	data-valor="@farinazzopedro">@farinazzopedro</button>
+
+<button type="button" class="btn btn-secondary send-form-taged" 
+	data-valor="@renan__henrique">@renan__henrique</button>
+
+<button type="button" class="btn btn-secondary send-form-taged" 
+	data-valor="@stenio_lima_">@stenio_lima_</button>
+
+
+<br><br>
+
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="@victormontalvao">@victormontalvao</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="@arthur_rosseto">@arthur_rosseto</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="@lucaslobato.med">@lucaslobato.med</button>
+
+<br><br>
+
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="@victormorettir">@victormorettir</button>
+<button type="button" class="btn btn-secondary send-form-taged" data-valor="@thiago2n">@thiago2n</button>
+
+<!--
+@adriano.olvv
+@the.ferraz
+@thiago2n
+andreitoribo
+renan-greg
+@lucaslobato.med
+@arthur_rosseto
+@briandtaves
+@victormorettir
+@rafaaa_ribeiro
+@victormontalvao
+@vonzin
+privacy
+Corrida: @calmaclima
+-->
+
+
                         <button type="button" class="btn btn-success" id="succes" disabled style="display: none;">Sucesso</button>
                         <button type="button" class="btn btn-danger" id="failed" disabled style="display: none;">Falhou</button>
                     </form>

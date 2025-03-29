@@ -119,7 +119,7 @@ function lerTags(arquivo) {
       /*initiate the autocomplete function on the "prefixer" element, and pass along the nome_to_complete array as possible autocomplete values:*/
       autocomplete(document.getElementById("prefixer"), nome_to_complete);
 
-      var cards = document.querySelectorAll(".prefixer-func");
+      var cards = document.querySelectorAll(".prefixer");
       for (var i = 0; i < cards.length; i++) {
         var card = cards[i];
         autocomplete(card, nome_to_complete);
